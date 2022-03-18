@@ -1,0 +1,24 @@
+﻿@page "/BaseTotal"    
+@using BlazorPro.Spinkit
+@using Blazor_DI_Interface_Service.Client.BaseService
+@inject IBaseService _baseService
+@if(isLoading1)
+{
+<SpinLoader IsLoading="isLoading1=true" id="1" Color="cornflowerblue" Size="40px" Spinner="SpinnerType.Bounce"></SpinLoader>
+}    
+<h3>TotalBase (@TOTAL)</h3>
+
+@code {
+
+    private int TOTAL;
+    bool isLoading1 = false;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        isLoading1 = true;
+        await Task.Delay(1500);
+        TOTAL = await _baseService.GetTotalBaseAsync();
+        isLoading1 = false;
+        StateHasChanged();
+    }
+}
