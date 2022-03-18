@@ -10,7 +10,6 @@ namespace Blazor_DI_Interface_Service.Server.BaseServices
         {
             _context = context;
         }
-
         public async Task<int> DevolveNumTotalRegsBase()
         {
             return await _context.TblTotalBase!.Select(x => x.TotalBase).FirstOrDefaultAsync();

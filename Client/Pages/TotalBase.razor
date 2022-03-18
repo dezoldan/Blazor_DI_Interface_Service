@@ -6,18 +6,18 @@
 {
 <SpinLoader IsLoading="isLoading1=true" id="1" Color="cornflowerblue" Size="40px" Spinner="SpinnerType.Bounce"></SpinLoader>
 }    
-<h3>TotalBase (@TOTAL)</h3>
+<h3>TotalBase (@totalBaseDados)</h3>
 
 @code {
 
-    private int TOTAL;
+    private int totalBaseDados;
     bool isLoading1 = false;
     
     protected override async Task OnInitializedAsync()
     {
         isLoading1 = true;
-        await Task.Delay(1500);
-        TOTAL = await _baseService.GetTotalBaseAsync();
+        await Task.Delay(500);
+        totalBaseDados = await _baseService.GetTotalBaseAsync();
         isLoading1 = false;
         StateHasChanged();
     }
