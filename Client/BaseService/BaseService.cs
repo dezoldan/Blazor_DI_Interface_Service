@@ -12,7 +12,7 @@ namespace Blazor_DI_Interface_Service.Client.BaseService
 
         public async Task<int> GetTotalBaseAsync()
         {
-            return await _http.GetFromJsonAsync<int>("api/Dados/TotalBaseDeDados");
+            return await _http.GetFromJsonAsync<int>("api/Dados/totalbasedados");
         }
     }
 }

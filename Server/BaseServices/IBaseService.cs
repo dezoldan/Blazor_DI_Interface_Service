@@ -2,6 +2,6 @@
 {
     public interface IBaseService
     {
-        Task<int> DevolveNumTotalRegsBase();
+        Task<int> DevolveNumTotalRegsBaseDados();
     }
 }

@@ -15,10 +15,10 @@ namespace Blazor_DI_Interface_Service.Server.Controllers
         }
 
         [AllowAnonymous]
-        [HttpGet("TotalBaseDeDados")]
-        public async Task<ActionResult<int>> GetTotalBase()
+        [HttpGet("totalbasedados")]
+        public async Task<ActionResult<int>> GetTotalBaseDados()
         {
-            return await _baseService.DevolveNumTotalRegsBase();
+            return await _baseService.DevolveNumTotalRegsBaseDados();
         }
 
     }
